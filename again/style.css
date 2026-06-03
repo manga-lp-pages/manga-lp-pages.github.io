@@ -55,27 +55,6 @@ a {
   border: 0;
 }
 
-.eyebrow {
-  display: inline-block;
-  margin: 0 0 10px;
-  max-width: min(100%, 34em);
-  padding: 8px 14px;
-  border: 1px solid rgba(15, 118, 110, 0.24);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.86);
-  color: var(--accent-dark);
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.45;
-}
-
-.brand-label {
-  margin: 0 0 6px;
-  color: var(--accent-dark);
-  font-size: 13px;
-  font-weight: 900;
-}
-
 h1,
 h2,
 p {
@@ -87,20 +66,6 @@ h1 {
   font-size: clamp(30px, 8vw, 50px);
   line-height: 1.14;
   letter-spacing: 0;
-}
-
-.lead {
-  margin: 12px 0 18px;
-  color: var(--ink);
-  font-size: clamp(16px, 4vw, 21px);
-  font-weight: 900;
-}
-
-.sub-lead {
-  margin: -6px 0 18px;
-  color: var(--muted);
-  font-size: clamp(15px, 3.8vw, 18px);
-  font-weight: 700;
 }
 
 .hero-image,
@@ -257,15 +222,32 @@ h2 {
 }
 
 .regular-price {
+  position: relative;
+  display: inline-block;
   color: var(--muted);
   font-size: 16px;
   font-weight: 900;
+  padding: 2px 6px;
 }
 
-.regular-price span {
-  text-decoration: line-through;
-  text-decoration-color: var(--cta-dark);
-  text-decoration-thickness: 3px;
+.regular-price::before,
+.regular-price::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--cta-dark);
+}
+
+.regular-price::before {
+  transform: rotate(9deg);
+}
+
+.regular-price::after {
+  transform: rotate(-9deg);
 }
 
 .special-price {
