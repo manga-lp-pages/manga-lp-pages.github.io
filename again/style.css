@@ -290,34 +290,10 @@ h2 {
   font-weight: 800;
 }
 
-.faq details {
-  border-top: 1px solid var(--line);
-  padding: 14px 0;
-}
-
-.faq details:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-.faq summary {
-  cursor: pointer;
-  font-weight: 900;
-}
-
-.faq details p {
-  margin: 10px 0 0;
-  color: var(--muted);
-}
-
 .notice {
   margin: 12px 0 0;
   color: var(--muted);
   font-size: 12px;
-}
-
-.cta-band-bottom {
-  margin-top: 22px;
-  background: linear-gradient(180deg, #ffffff 0%, #f3faf8 100%);
 }
 
 @media (min-width: 820px) {
