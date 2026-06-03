@@ -103,8 +103,16 @@ h1 {
   color: var(--muted);
 }
 
+.cta-mini-offer {
+  margin: 0 auto 16px;
+  padding: 12px 14px 14px;
+  border: 2px solid rgba(217, 79, 43, 0.22);
+  border-radius: 8px;
+  background: #fff8f4;
+}
+
 .cta-deadline {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   color: var(--cta-dark);
   font-size: 15px;
   font-weight: 900;
@@ -116,8 +124,8 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 4px 10px;
-  margin: 0 0 14px;
+  gap: 4px 16px;
+  margin: 0;
   line-height: 1.2;
 }
 
@@ -126,7 +134,7 @@ h1 {
   display: inline-block;
   padding: 2px 6px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 900;
 }
 
@@ -150,16 +158,19 @@ h1 {
   transform: rotate(-8deg);
 }
 
-.cta-arrow {
-  color: var(--muted);
-  font-size: 15px;
-  font-weight: 900;
-}
-
 .cta-special-price {
   color: var(--cta-dark);
-  font-size: clamp(32px, 9vw, 44px);
+  font-size: clamp(36px, 10vw, 52px);
   font-weight: 900;
+  line-height: 1;
+}
+
+.cta-price-note {
+  margin: 4px 0 0;
+  color: var(--cta-dark);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.4;
 }
 
 .cta-button {
