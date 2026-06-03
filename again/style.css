@@ -103,6 +103,14 @@ h1 {
   color: var(--muted);
 }
 
+.cta-band-first .cta-note {
+  max-width: 34em;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .cta-button {
   display: inline-flex;
   align-items: center;
