@@ -21,8 +21,8 @@
 
     <section class="cta-band" aria-label="特別価格と開催日程の案内">
       <p class="cta-kicker">4日程から選べるオンラインセミナー</p>
-      <p class="cta-schedule-summary">開催日：○/○・○/○・○/○・○/○</p>
-      <p class="cta-helper">※正式な日時は確定後に差し替えます。フォーム内で参加日を選べます。</p>
+      <p class="cta-schedule-summary">開催日：7/15(水)・7/17(金)・7/20(月・祝)・7/23(木)</p>
+      <p class="cta-helper">※フォーム内で参加日を選べます。</p>
       <div class="cta-mini-offer" aria-label="特別関係者割引価格">
         <p class="cta-deadline">6月26日(金)23:59まで</p>
         <p class="cta-price-line">
@@ -32,8 +32,8 @@
         </p>
         <p class="cta-price-note">特別関係者割引</p>
       </div>
-      <a class="cta-button" href="#final-cta">日程を選んで申し込む</a>
-      <p class="cta-form-note">フォームURLが確定したら、このボタンに設定します。</p>
+      <a class="cta-button" href="https://forms.gle/sVYeaseKCCPewdq59" target="_blank" rel="noopener" data-track="cta-click" data-cta-position="top">日程を選んで申し込む</a>
+      <p class="cta-form-note">フォーム内で参加日を選択してください。</p>
     </section>
 
     <section id="manga" class="manga-reader" aria-label="漫画本編">
@@ -75,21 +75,41 @@
       <div class="closing-schedule" aria-label="開催日程">
         <p class="closing-schedule-title">開催日程</p>
         <ul>
-          <li>○月○日（○）○○:○○〜○○:○○</li>
-          <li>○月○日（○）○○:○○〜○○:○○</li>
-          <li>○月○日（○）○○:○○〜○○:○○</li>
-          <li>○月○日（○）○○:○○〜○○:○○</li>
+          <li>7月15日(水)20時00分～22時00分</li>
+          <li>7月17日(金)14時00分～16時00分</li>
+          <li>7月20日(月・祝)20時00分～22時00分</li>
+          <li>7月23日(木)10時00分～12時00分</li>
         </ul>
-        <p class="closing-schedule-note">※正式な日時は確定後に差し替えます。フォーム内で参加日を選べます。</p>
+        <p class="closing-schedule-note">※フォーム内で参加日を選べます。</p>
       </div>
       <p class="closing-title">
         <span class="closing-regular-price">通常価格 4,000円</span>
         <span class="price-arrow" aria-hidden="true">→</span>
         <span>特別価格 1,000円</span>
       </p>
-      <a class="cta-button" href="#" aria-disabled="true">日程を選んで申し込む</a>
-      <p class="closing-text">フォームURLが確定したら、このボタンに設定します。</p>
+      <a class="cta-button" href="https://forms.gle/v7WgNsRoRgQMCJrC7" target="_blank" rel="noopener" data-track="cta-click" data-cta-position="bottom">日程を選んで申し込む</a>
+      <p class="closing-text">フォーム内で参加日を選択してください。</p>
     </section>
   </main>
+  <script>
+    document.querySelectorAll('[data-track="cta-click"]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const position = link.dataset.ctaPosition || 'unknown';
+        if (window.gtag) {
+          window.gtag('event', 'cta_click', {
+            event_category: 'again_lp',
+            event_label: position
+          });
+        }
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'cta_click',
+            cta_position: position,
+            page_path: window.location.pathname
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
